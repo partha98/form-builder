@@ -18,6 +18,7 @@ model Form{
   userId  String
   createdAt DateTime @default(now())
   published Boolean @default(false)
+  name String
   description String @default("")
   content String @default("[]")
 
@@ -26,6 +27,8 @@ model Form{
 
   shareUrl String @default(uuid())
   formSubmissions FormSubmission[]
+
+  @@unique([name,userId])
 }
 
 model FormSubmission{

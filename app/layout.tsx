@@ -5,6 +5,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
 import Logo from '@/components/Logo'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
+import { Toaster } from '@/components/ui/toaster'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -39,6 +40,7 @@ export default function RootLayout({
               <main className="flex w-full flex-grow">{children}</main>
             </div>
           </ThemeProvider>
+          <Toaster/>
         </body>
       </html>
     </ClerkProvider>
